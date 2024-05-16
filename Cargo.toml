@@ -1,0 +1,20 @@
+[package]
+name = "amid"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.5"
+prost = "0.12.4"
+tokio = { version = "1.37.0", features = ["full"] }
+tonic = "0.11.0"
+tower-grpc = "0.1.1"
+
+[build-dependencies]
+tonic-build = "0.11.0"
+
+
+[build]
+rustc-env = { "CARGO_TARGET_PROTO_DIR" = "proto" }
